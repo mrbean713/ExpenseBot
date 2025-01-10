@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Summary</title>
+</head>
+<body>
+    <h1>Expense Summary</h1>
+
+    <h2>Work Expenses</h2>
+    <ul>
+        {% for description, amount in summary['Work Expenses'].items() %}
+            <li>{{ description }}: ${{ "%.2f" | format(amount) }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total Work Expenses: ${{ "%.2f" | format(summary['Total Work']) }}</p>
+
+    <h2>Personal Expenses</h2>
+    <ul>
+        {% for description, amount in summary['Personal Expenses'].items() %}
+            <li>{{ description }}: ${{ "%.2f" | format(amount) }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total Personal Expenses: ${{ "%.2f" | format(summary['Total Personal']) }}</p>
+
+    <a href="/">Back to Upload</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseBot - Upload Data</title>
+</head>
+<body>
+    <h1>Upload Your Amex CSV and Google Sheet ID</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="spreadsheet_id">Google Sheet ID:</label>
+        <input type="text" name="spreadsheet_id" required><br><br>
+        <label for="file">Amex CSV File:</label>
+        <input type="file" name="file" accept=".csv" required><br><br>
+        <button type="submit">Upload and Analyze</button>
+    </form>
+</body>
+</html>
